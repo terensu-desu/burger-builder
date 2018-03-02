@@ -10,11 +10,26 @@ const navigationItems = (props) => (
 				Burger Builder
 			</NavLink>
 		</li>
-		<li className={classes.NavigationItem}>
-			<NavLink to="/orders" activeClassName={classes.active}>
-				Orders
-			</NavLink>
-		</li>
+		{props.isAuth
+		?	<li className={classes.NavigationItem}>
+				<NavLink to="/orders" activeClassName={classes.active}>
+					Orders
+				</NavLink>
+			</li>
+		: null
+		}
+		{!props.isAuth
+		?	<li className={classes.NavigationItem}>
+				<NavLink to="/auth" activeClassName={classes.active}>
+					Signup/Login
+				</NavLink>
+			</li>
+		:	<li className={classes.NavigationItem}>
+				<NavLink to="/logout" activeClassName={classes.active}>
+					Logout
+				</NavLink>
+			</li>
+		}
 	</ul>
 )
 
