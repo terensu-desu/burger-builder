@@ -8,12 +8,9 @@
     padding: 10px;
     margin: 10px;
     font-weight: bold;
+    text-align: center;
 }
 
-.Button:first-of-type {
-    margin-left: 0;
-    padding-left: 0;
-}
 
 .Button:disabled {
     color: #ccc;
