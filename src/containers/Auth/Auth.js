@@ -125,7 +125,9 @@ class Auth extends Component {
 				<Button 
 					clicked={this.switchAuthModeHandler} 
 					btnType="Danger">
-						SWITCH TO {this.state.isSignup ? "SIGNIN" : "SIGNUP"}
+						SWITCH TO {this.state.isSignup 
+							? <span style={{color: "blue"}}>SIGNIN</span> 
+							: <span style={{color: "salmon"}}>SIGNUP</span>}
 				</Button>
 			</div>
 		);
