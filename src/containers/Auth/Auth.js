@@ -120,7 +120,7 @@ class Auth extends Component {
 				<form onSubmit={this.submitHandler}>
 					{form}
 					<Button btnType="Success">SUBMIT</Button>
-					{this.props.error ? <p>{this.props.error.message}</p> : null}
+					{this.props.error ? <p>{this.props.error}</p> : null}
 				</form>
 				<Button 
 					clicked={this.switchAuthModeHandler} 
